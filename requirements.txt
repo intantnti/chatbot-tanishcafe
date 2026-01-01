@@ -1,0 +1,6 @@
+flask
+scikit-learn
+gunicorn
+groq
+nltk
+python-dotenv

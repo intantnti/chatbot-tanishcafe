@@ -1,0 +1,134 @@
+{
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "Halo",
+        "Hai Tanish Cafe",
+        "Selamat pagi",
+        "Selamat siang",
+        "Selamat malam",
+        "Permisi",
+        "Ada orang?",
+        "P"
+      ],
+      "responses": [
+        "Halo! Selamat datang di Tanish Cafe. Ada yang bisa kami bantu?",
+        "Hai! Senang bertemu Anda. Mau reservasi atau tanya menu?",
+        "Selamat datang di Tanish Cafe! Silakan tanya apa saja kepada saya."
+      ]
+    },
+    {
+      "tag": "reservasi",
+      "patterns": [
+        "Saya mau reservasi meja",
+        "Bagaimana cara booking tempat?",
+        "Mau pesan meja buat nanti malam",
+        "Bisa reservasi untuk 2 orang?",
+        "Saya ingin booking meja untuk ulang tahun",
+        "Cara reservasinya gimana?"
+      ],
+      "responses": [
+        "Tentu, untuk reservasi silakan sebutkan nama, tanggal, jam, dan jumlah orang ya.",
+        "Bisa banget! Silakan kirim detail reservasi (Nama/Tanggal/Jam/Jumlah Orang) ke WhatsApp admin kami di 0812-XXXX-XXXX atau langsung jawab di sini.",
+        "Siap, kami menerima reservasi. Untuk hari apa dan jam berapa kak?"
+      ]
+    },
+    {
+      "tag": "menu_makanan",
+      "patterns": [
+        "Ada menu makanan apa saja?",
+        "Minta daftar menu makanannya",
+        "Apa menu andalan di sini?",
+        "Jual nasi goreng nggak?",
+        "Lihat menu makanannya dong",
+        "Makanannya yang best seller apa?"
+      ],
+      "responses": [
+        "Menu andalan kami ada Nasi Goreng Tanish, Steak Ayam, dan Pasta Carbonara. Silakan cek buku menu di highlight Instagram kami @tanishcafe.",
+        "Kami menyediakan berbagai makanan mulai dari Western hingga Indonesian food. Favorit pelanggan adalah Tanish Burger dan Mie Goreng Spesial.",
+        "Banyak kak! Ada Steak, Pasta, Burger, dan aneka Nasi. Mau yang pedas atau tidak?"
+      ]
+    },
+    {
+      "tag": "menu_minuman",
+      "patterns": [
+        "Minumannya ada apa aja?",
+        "Ada kopi?",
+        "Jual kopi gula aren?",
+        "Daftar harga minuman",
+        "Menu minumannya mana?",
+        "Ada minuman non-kopi?"
+      ],
+      "responses": [
+        "Kami punya aneka kopi (Espresso, Latte, Manual Brew) dan non-kopi (Matcha, Coklat, Smoothies).",
+        "Pasti ada dong! Tanish Kopi Susu Gula Aren adalah favorit di sini. Kami juga punya aneka teh dan jus segar.",
+        "Minuman kami mulai dari Rp15.000. Tersedia varian Coffee, Tea, dan Mocktail segar."
+      ]
+    },
+    {
+      "tag": "jam_buka",
+      "patterns": [
+        "Buka jam berapa?",
+        "Tutup jam berapa?",
+        "Hari ini buka?",
+        "Jadwal buka cafe",
+        "Sampai jam berapa bukanya?",
+        "Minggu buka nggak?"
+      ],
+      "responses": [
+        "Tanish Cafe buka setiap hari dari pukul 10.00 pagi hingga 22.00 malam.",
+        "Kami buka setiap hari Senin - Minggu, jam 10.00 - 22.00 WIB.",
+        "Halo, kami buka jam 10 pagi dan last order jam 9.30 malam ya kak."
+      ]
+    },
+    {
+      "tag": "lokasi",
+      "patterns": [
+        "Lokasinya di mana?",
+        "Alamat lengkapnya dong",
+        "Share loc Tanish Cafe",
+        "Tanish Cafe di sebelah mana?",
+        "Cabangnya di mana saja?",
+        "Alamatnya di jalan apa?"
+      ],
+      "responses": [
+        "Tanish Cafe berlokasi di Jl. Melati No. 123 (Samping Toko Buku Jaya).",
+        "Lokasi kami ada di pusat kota, tepatnya di Jl. Melati No. 123. Bisa cari 'Tanish Cafe' di Google Maps ya!",
+        "Kami ada di Jl. Melati No. 123. Ditunggu kedatangannya kak!"
+      ]
+    },
+    {
+      "tag": "fasilitas",
+      "patterns": [
+        "Ada WiFi nggak?",
+        "Di sana ada colokan?",
+        "Bisa buat kerja nggak?",
+        "Ada smoking area?",
+        "Fasilitasnya apa saja?",
+        "Ada musholla?"
+      ],
+      "responses": [
+        "Fasilitas kami lengkap! Ada WiFi kencang, banyak colokan listrik, musholla, dan toilet bersih.",
+        "Ada kak, kami punya area indoor ber-AC (No Smoking) dan area outdoor (Smoking Area). WiFi juga tersedia.",
+        "Tentu saja, Tanish Cafe cocok banget buat WFC (Work From Cafe) karena WiFi lancar dan banyak colokan."
+      ]
+    },
+    {
+      "tag": "selamat_tinggal",
+      "patterns": [
+        "Terima kasih",
+        "Makasih infonya",
+        "Oke thanks",
+        "Dadah",
+        "Sampai jumpa",
+        "Bye"
+      ],
+      "responses": [
+        "Sama-sama! Ditunggu kedatangannya di Tanish Cafe.",
+        "Terima kasih kembali. Semoga harimu menyenangkan!",
+        "Sampai jumpa! Jangan lupa ajak teman-teman ke sini ya."
+      ]
+    }
+  ]
+}
