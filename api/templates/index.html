@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tanish Cafe Chatbot</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .chat-container { width: 400px; background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; height: 600px; }
+        .header { background: #2E7D32; color: white; padding: 15px; text-align: center; font-weight: bold; }
+        .box { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .message { padding: 10px 15px; border-radius: 20px; max-width: 80%; font-size: 14px; }
+        .user { background: #E8F5E9; align-self: flex-end; color: #2E7D32; }
+        .bot { background: #f1f1f1; align-self: flex-start; color: #333; }
+        .input-area { padding: 15px; border-top: 1px solid #ddd; display: flex; gap: 10px; }
+        input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 20px; outline: none; }
+        button { padding: 10px 20px; background: #2E7D32; color: white; border: none; border-radius: 20px; cursor: pointer; }
+        button:hover { background: #1B5E20; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">☕ Tanish Cafe CS</div>
+        <div class="box" id="chat-box">
+            <div class="message bot">Halo! Selamat datang di Tanish Cafe. Ada yang bisa dibantu?</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Tanya sesuatu..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            let input = document.getElementById("user-input");
+            let message = input.value.trim();
+            if (!message) return;
+
+            // Tampilkan pesan user
+            let chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += `<div class="message user">${message}</div>`;
+            input.value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Tampilkan "Sedang mengetik..."
+            let loadingId = "loading-" + Date.now();
+            chatBox.innerHTML += `<div class="message bot" id="${loadingId}">Sedang mengetik...</div>`;
+
+            // Kirim ke API
+            try {
+                let response = await fetch("/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message: message })
+                });
+                let data = await response.json();
+                
+                // Ganti loading dengan jawaban asli
+                document.getElementById(loadingId).remove();
+                chatBox.innerHTML += `<div class="message bot">${data.response}</div>`;
+            } catch (error) {
+                document.getElementById(loadingId).innerText = "Maaf, error koneksi.";
+            }
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function handleEnter(e) {
+            if (e.key === "Enter") sendMessage();
+        }
+    </script>
+</body>
+</html>
